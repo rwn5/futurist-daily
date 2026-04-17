@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Friday, April 17, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 0.6rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 3rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; flex-wrap: wrap; }
+  .ticker-item { display: flex; gap: 0.6rem; align-items: center; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.6rem; letter-spacing: 0.1em; }
+  .ticker-val { color: #f5f2eb; }
+  .ticker-up { color: #5cb85c; }
+  .ticker-down { color: #e05252; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Friday, April 17, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">$7,022.95</span><span class="ticker-up">▲ 0.80%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">$48,463.72</span><span class="ticker-down">▼ 0.15%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">$24,016.02</span><span class="ticker-up">▲ 1.59%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">$18.08</span><span class="ticker-down">▼ 0.50%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$74,839.00</span><span class="ticker-up">▲ 1.19%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$1.42</span><span class="ticker-up">▲ 4.87%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$2,346.97</span><span class="ticker-up">▲ 1.13%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.10</span><span class="ticker-up">▲ 3.42%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source"> 404 Media</div><h3 class="story-headline"><a href="https://www.404media.co/ukraine-says-russians-are-surrendering-to-robots/">Ukraine Says Russians are Surrendering to Robots</a></h3>
+<p class="story-body">Volodymyr Zelenskyy is positioning Ukraine as a global leader in military robotics, claiming Russian soldiers are surrendering to autonomous systems. This marks a significant shift in how warfare is conducted and how nations brand themselves as defense tech innovators.</p>
+
+<h3 class="story-headline">404 Media</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/app-stores-apple-google-nudify-undress-deepfakes/">App Stores Push Users Toward Nudify Apps, New Research Shows</a></h3>
+<p class="story-body">Research from the Tech Transparency Project reveals that Google and Apple's app stores don't just host harmful deepfake "undressing" apps — they actively promote them through algorithms. The platforms are complicit in directing users toward non-consensual intimate image generation tools.</p>
+
+<h3 class="story-headline">Simon Willison</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything">Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7</a></h3>
+<p class="story-body">Alibaba's new open-source model outperformed Anthropic's flagship Claude Opus 4.7 on Willison's informal "pelican riding a bicycle" benchmark. This suggests smaller, locally-runnable models are rapidly closing the gap with expensive cloud-based AI services.</p>
+
+<h3 class="story-headline">CoinDesk</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/markets/2026/04/17/bitcoin-bulls-target-usd125-000-as-u-s-iran-peace-talks-trigger-risk-on-mood">Bitcoin bulls target $125,000 as U.S.-Iran peace talks trigger risk-on mood</a></h3>
+<p class="story-body">Geopolitical de-escalation between the U.S. and Iran is fueling risk appetite across markets. Bitcoin traders are setting ambitious $125,000 targets as peace talks reduce Middle East tensions and drive capital into growth assets.</p>
+
+<h3 class="story-headline">a16z</h3>
+<h3 class="story-headline"><a href="https://www.youtube.com/watch?v=vJiCnQeYLho">Rebuilding Git for AI Agents and The Future of Developer Tools</a></h3>
+<p class="story-body">GitHub co-founder Scott Chacon is rethinking version control through GitButler, designed for both human developers and AI agents. The conversation highlights how fundamental developer tools need rebuilding as coding becomes increasingly automated.</p>
+
+<h3 class="story-headline">The Neuron Daily</h3>
+<h3 class="story-headline"><a href="https://x.com/theneurondaily/status/2044778658993525236">AI just did something mathematicians wait their whole careers to do</a></h3>
+<p class="story-body">GPT-5.4 Pro solved a 60-year-old Erdős problem with a three-page proof, representing a breakthrough in AI mathematical reasoning. This achievement suggests we're approaching genuine AI-driven mathematical discovery rather than mere computation.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/AndrewYNg/status/2044449830605582629">@AndrewYNg</a></h3></div><p>Andrew Ng launched a new course on "Spec-Driven Development with Coding Agents" in partnership with JetBrains, signaling the shift from "vibe coding" to structured agent-driven development. This represents academia's recognition that AI coding workflows need formal frameworks to scale beyond quick prototypes to production systems.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/milesdeutscher/status/2044809399999631656">@milesdeutscher</a></h3></div><p>Miles Deutscher shared what he calls his "most powerful vibe coding prompt ever" for Claude Opus 4.7, claiming it can ship fully functional applications. This reflects the growing sophistication of prompt engineering as a skill, where the right instructions can unlock dramatically better AI performance across complex tasks.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2044799110088130992">@emollick</a></h3></div><p>Ethan Mollick observed that "Claude remains irreducibly Claude" despite model updates, noting how AI systems maintain consistent personalities across generations. This consistency in AI personality traits is becoming a key differentiator as models compete not just on capability but on character and interaction style.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/rowancheung/status/2045049285029363888">@rowancheung</a></h3></div><p>A startup called Sabi emerged from stealth with a beanie containing 70,000-100,000 miniature EEG sensors that can read thoughts. This represents the convergence of brain-computer interfaces with consumer wearables, potentially making neural control as commonplace as voice commands.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body">The collision between AI advancement and real-world deployment is accelerating beyond anyone's projections. While Ukraine weaponizes robots and claims enemy surrender to autonomous systems, Silicon Valley's app stores quietly funnel users toward AI-generated exploitation tools. The contrast reveals how rapidly AI capabilities are outpacing our ability to govern them responsibly.
+
+<strong>The most significant shift isn't in model capabilities but in how we're structuring human-AI collaboration.</strong> Andrew Ng's push for spec-driven development and GitButler's agent-optimized version control suggest the industry is moving beyond "vibe coding" toward systematic frameworks. When GitHub's co-founder rebuilds Git specifically for AI agents, it signals that our fundamental development tools need reimagining for a world where code writes itself.
+
+<div class="thread-pull">"The person who writes down the thing has tremendous power."</div>
+
+Meanwhile, the mathematical breakthrough of GPT-5.4 Pro solving a 60-year-old Erdős problem demonstrates that AI is beginning to contribute genuine intellectual discoveries, not just process optimization. This isn't about replacing human mathematicians — it's about accelerating the pace of discovery to timescales that would have been impossible with human-only collaboration.
+
+The financial markets are pricing in geopolitical stability as U.S.-Iran peace talks drive Bitcoin toward $125,000 targets, but the real stability question lies in our ability to deploy these technologies responsibly. When app stores algorithmically promote harmful deepfake tools while Ukraine broadcasts robot warfare as a recruiting pitch, we're seeing the full spectrum of AI deployment — from exploitation to liberation, often within the same technological ecosystem.</div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a></div>
+</footer>
+
+</body>
+</html>
