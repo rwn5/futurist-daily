@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Sunday, July 05, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 1.25rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 2.5rem; font-family: 'DM Mono', monospace; font-size: 1rem; letter-spacing: 0.03em; flex-wrap: wrap; }
+  .ticker-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.12em; }
+  .ticker-val { color: #f5f2eb; font-size: 1.1rem; font-weight: 500; }
+  .ticker-up { color: #5cb85c; font-size: 0.85rem; }
+  .ticker-down { color: #e05252; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Sunday, July 05, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">$7,483.24</span><span class="ticker-up">▲ 0.00%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">$52,900.07</span><span class="ticker-up">▲ 1.14%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">$25,832.67</span><span class="ticker-down">▼ 0.80%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">$15.81</span><span class="ticker-down">▼ 2.04%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$62,398.00</span><span class="ticker-up">▲ 1.17%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$1.13</span><span class="ticker-up">▲ 3.26%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$1,754.39</span><span class="ticker-up">▲ 1.61%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.08</span><span class="ticker-up">▲ 2.54%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source">404 MEDIA</div><h3 class="story-headline"><a href="https://www.404media.co/companies-are-throttling-employees-ai-use-because-its-too-expensive/">Companies Are Throttling Employees' AI Use Because It's Too Expensive</a></h3>
+<p class="story-body">Amazon, Adobe, Atlassian, Citi, and others are quietly capping AI usage as costs spiral out of control. The gap between enterprise AI hype and enterprise AI budgets is becoming impossible to ignore.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/untitled-28/">Scientists Asked AI to Impersonate 112 Public Figures. What Happened Next Is a 'Dire' Warning</a></h3>
+<p class="story-body">Researchers found people rated AI impersonators as more authentic, coherent, and relevant than the actual politicians. The authenticity advantage of being real is evaporating fast.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/">sqlite-utils 4.0rc2, Mostly Written by Claude Fable for $149.25</a></h3>
+<p class="story-body">Simon Willison used Claude Fable in its final days on Max subscriptions to push sqlite-utils toward a stable 4.0 release. A precise, honest accounting of what frontier AI actually costs when doing real open-source work.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Jul/4/better-models-worse-tools/">Better Models: Worse Tools</a></h3>
+<p class="story-body">Newer Claude models are hallucinating extra fields in tool calls — Opus 4, not some lightweight model. More capability doesn't automatically mean more reliability at the integration layer.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows/">Bitcoin Experts Split Over Plan to Freeze Satoshi's 1.1 Million Bitcoin</a></h3>
+<p class="story-body">As quantum computing threats grow more credible, the debate over locking Satoshi's coins is intensifying. It's a governance crisis hiding inside a technical one.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/tech/2026/07/04/how-ethical-hackers-with-just-a-usd3-000-server-found-a-flaw-that-could-ve-put-usd70-billion-in-crypto-at-risk/">Ethical Hackers With a $3,000 Server Found a Flaw Threatening $70 Billion in Crypto</a></h3>
+<p class="story-body">A bare-bones setup uncovered a critical vulnerability across the crypto ecosystem. The attack surface for digital assets is far cheaper to exploit than anyone wants to admit.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/KobeissiLetter/status/2073562923918664058">@KobeissiLetter</a></h3></div><p>Kobeissi flagged that US tech companies are committing to a record $850 billion in data center lease spend. That number lands differently when read alongside 404 Media's story about those same companies throttling employee AI use — the infrastructure bet is enormous, but the day-to-day economics aren't working yet.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2073248523215089825">@emollick</a></h3></div><p>Ethan Mollick asked what happens when the frontier model itself becomes the router, delegating work rather than waiting for humans to orchestrate. It's a quiet but important reframe — the agent layer may not need to be built separately if the model is capable enough to self-organize.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/milesdeutscher/status/2073437521107911102">@milesdeutscher</a></h3></div><p>Miles Deutscher noted that accidentally running Opus 4.8 instead of Fable made Claude feel suddenly "dumb." With Fable access narrowing due to government pressure and subscription limits, the model gap is becoming a real workflow problem — not just a benchmark story.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body"><strong>The AI cost squeeze is the story underneath every other story right now.</strong> Companies made big bets on AI productivity, but the token bills arrived before the productivity gains. Throttling employee access is the corporate equivalent of hiding the credit card statement. Meanwhile, $850 billion in data center commitments is being locked in. Someone is very confident this math eventually works — they just need the enterprise customers to hold on a little longer.
+
+<div class="thread-pull">The authenticity advantage of being real is evaporating. AI impersonators rated more coherent than actual politicians is not a satire headline — it's a research finding.</div>
+
+The Fable situation is its own subplot. A model so capable that losing access to it breaks real workflows, and now that access is being restricted by government letter. Developers scrambling to local models isn't idealism anymore — it's contingency planning. Simon Willison spent $149 having Claude help ship a stable open-source release. That's the mundane, productive version of this technology. The version where governments send letters is the one that should focus minds.
+
+The "better models, worse tools" problem is underrated. As frontier models get more powerful, they also get more creative in ways that break structured integrations — inventing API fields, going off-script. Capability and reliability are not the same axis, and the gap between them is where a lot of real engineering pain lives right now.</div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a></div>
+</footer>
+
+</body>
+</html>
