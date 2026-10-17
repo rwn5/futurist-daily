@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Saturday, October 17, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 1.25rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 2.5rem; font-family: 'DM Mono', monospace; font-size: 1rem; letter-spacing: 0.03em; flex-wrap: wrap; }
+  .ticker-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.12em; }
+  .ticker-val { color: #f5f2eb; font-size: 1.1rem; font-weight: 500; }
+  .ticker-up { color: #5cb85c; font-size: 0.85rem; }
+  .ticker-down { color: #e05252; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Saturday, October 17, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">$7,744.06</span><span class="ticker-up">▲ 0.33%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">$52,177.69</span><span class="ticker-up">▲ 1.08%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">$26,713.03</span><span class="ticker-up">▲ 0.08%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">$16.00</span><span class="ticker-down">▼ 2.79%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$82,109.00</span><span class="ticker-up">▲ 1.12%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$1.34</span><span class="ticker-up">▲ 1.80%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$2,451.95</span><span class="ticker-up">▲ 3.53%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.08</span><span class="ticker-up">▲ 2.76%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source">404 MEDIA</div><h3 class="story-headline"><a href="https://www.404media.co/podcast-cops-can-use-ai-to-pinpoint-your-home-with-just-one-photo/">Cops Can Use AI to Pinpoint Your Home with Just One Photo</a></h3>
+<p class="story-body">Raven, formerly known as Geospy, can now identify the specific house where a photo was taken — a capability already in police hands. A judge separately ruled a Flock license-plate search unconstitutional, setting up a collision between AI surveillance tools and Fourth Amendment law.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/tech/2026/10/17/wow-it-s-a-real-discovery-claude-cracks-a-25-year-nsa-number-mystery">Claude Cracks a 25-Year NSA Number Mystery</a></h3>
+<p class="story-body">Anthropic's Claude resolved a cryptographic puzzle that stumped the NSA for a quarter century. It's a concrete demonstration that frontier AI isn't just autocomplete — it's doing original mathematical work.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/">Anthropic Revenue Up Nearly 50% to $16.8B Quarterly Ahead of IPO</a></h3>
+<p class="story-body">Anthropic hosted investors and shared eye-popping numbers: quarterly revenue nearly $17 billion, up 50% in a single quarter. The All-In crew called the investor day mixed, flagging debt loads and self-replicating model warnings as red flags alongside the growth story.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/computers-made-of-human-brain-tissue-identify-braille-letters-in-breakthrough/">Computers Made of Human Brain Tissue Identify Braille Letters in Breakthrough</a></h3>
+<p class="story-body">Human brain organoids — neural clusters grown from stem cells — successfully identified the full Braille alphabet with high accuracy. Wetware computing just got a lot less theoretical.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/here-s-what-telegram-giving-data-to-the-u-s-government-looks-like/">Here's What Telegram Giving Data to the U.S. Government Looks Like</a></h3>
+<p class="story-body">Newly surfaced court records show Telegram complying with U.S. court orders and handing over user data. The "secure messenger" narrative just took another hit.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/opinion/2026/10/16/big-tech-s-ai-auditors-will-only-see-what-they-re-shown/">Big Tech's AI Auditors Will Only See What They're Shown</a></h3>
+<p class="story-body">A sharp opinion piece arguing that AI auditing frameworks are structurally compromised — companies control what auditors access, making compliance theater more likely than real accountability. Regulation is arriving faster than the tools to make it meaningful.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/KobeissiLetter/status/2111215937391112571">@KobeissiLetter</a></h3></div><p>US equity ETFs pulled in $1.4 trillion in inflows over the past 12 months — the largest such stretch on record, with tech funds alone accounting for a massive slice. This is the market's revealed preference: retail and institutions alike are betting that AI-driven earnings are real, not imagined, even as the deficit widens to $1.99 trillion and spending climbs 6% year-over-year.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/theneurondaily/status/2111235741204332688">@TheNeuronDaily</a></h3></div><p>The Simons Foundation is committing $15 million to help mathematicians adapt to AI, working directly with Anthropic and OpenAI. Coming the same week Claude cracked a 25-year NSA puzzle, this isn't philanthropy — it's an acknowledgment that the math profession is about to be reorganized around AI collaboration rather than solo genius.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2111171225418408236">@Ethan Mollick</a></h3></div><p>Mollick flagged a paper on a team of Gemini 4 agents beating Minecraft, calling it an accessible example of spontaneous emergent behavior in multi-agent systems. The paper being AI-written is itself part of the signal — we're watching agents document their own capabilities, which is either fascinating or unsettling depending on your priors.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/dair_ai/status/2111195415437529545">@DAIR.AI</a></h3></div><p>DAIR flagged a point few are discussing: persistence — the ability of models to maintain state and goals across long interactions — has quietly become a core capability in Opus 5.5, GPT-6 Astra, and Gemini 4. This is the architectural shift that makes agents actually dangerous and actually useful, and it's landing with almost no public debate.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body"><p>Two stories this week deserve to be read together. Claude cracking a 25-year NSA cryptographic mystery and Anthropic posting $16.8 billion in quarterly revenue aren't separate events — they're the same event. The revenue reflects the world's revealed belief that these models are doing something genuinely new, and the NSA puzzle is evidence they're right. The benchmarks were always proxies; original mathematical discovery is the thing itself.</p>
+
+<div class="thread-pull">"Persistence has become a core capability of recent models — and almost no one is talking about it."</div>
+
+<strong>The sleeper story is the persistence finding.</strong> Stateless AI was containable. An agent that remembers, that maintains goals across sessions, that can be interrupted and resume — that's a different object entirely. It's what makes the Gemini-beats-Minecraft paper more than a stunt: spontaneous coordination among persistent agents is the architecture of the agentic era, arriving faster than the governance frameworks meant to manage it. The AI auditors story in CoinDesk lands here too — regulators are showing up to inspect a building whose blueprints keep changing.
+
+<p>On the surveillance front, Raven's ability to geolocate a photo to a specific house, Telegram's quiet compliance with U.S. data orders, and cops deploying AI-generated child personas for stings — these are no longer edge cases. They are the operational baseline. The Fourth Amendment cases will take years; the technology is shipping today. What the courts decide about Flock searches will shape the legal perimeter around all of this, but the perimeter is already being tested from every direction at once.</p></div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a> &nbsp;|&nbsp; <a href="https://x.com/EpochAIResearch">@EpochAIResearch</a> &nbsp;|&nbsp; <a href="https://x.com/GoldmanSachs">@GoldmanSachs</a> &nbsp;|&nbsp; <a href="https://x.com/federalreserve">@federalreserve</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@allin">All-In</a></div>
+</footer>
+
+</body>
+</html>
