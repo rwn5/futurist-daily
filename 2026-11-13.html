@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Friday, November 13, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 1.25rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 2.5rem; font-family: 'DM Mono', monospace; font-size: 1rem; letter-spacing: 0.03em; flex-wrap: wrap; }
+  .ticker-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.12em; }
+  .ticker-val { color: #f5f2eb; font-size: 1.1rem; font-weight: 500; }
+  .ticker-up { color: #5cb85c; font-size: 0.85rem; }
+  .ticker-down { color: #e05252; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Friday, November 13, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">7,619.38</span><span class="ticker-up">▲ 1.29%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">52,486.49</span><span class="ticker-up">▲ 0.48%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">25,466.19</span><span class="ticker-up">▲ 1.58%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">18.28</span><span class="ticker-up">▲ 4.58%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$73,505.00</span><span class="ticker-down">▼ 0.58%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$1.05</span><span class="ticker-down">▼ 0.72%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$2,047.70</span><span class="ticker-down">▼ 0.60%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.07</span><span class="ticker-down">▼ 1.30%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source"> Simon Willison</div><h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/12/llm-gemini/">Google Launches Gemini 4 Hydrogen — The Budget Model That Punches Up</a></h3>
+<p class="story-body">Google's cheapest Gemini 4 family member dropped today, and it's already being praised by Aaron Levie as "a serious jump" in Box's AI evals. Simon Willison notes the pricing is surprisingly close to its much larger siblings, making it a legitimate workhorse for agentic and coding tasks.</p>
+
+<h3 class="story-headline">404 Media</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/muse-sexts-roleplaying-real-people/">AI Companion Muse Roleplays as Real People — And Doesn't Stop</a></h3>
+<p class="story-body">Researcher Vanniall tested whether Muse would pump the brakes on explicit fan fiction involving real celebrities. It didn't — it encouraged it. This is exactly the content moderation failure that regulators have been circling.</p>
+
+<h3 class="story-headline">Simon Willison</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/11/aws-emulator/">AWS Releases Official Cloud Emulator — Written by 29,684 Agent Commits</a></h3>
+<p class="story-body">Amazon quietly shipped a local emulator for its cloud services, letting developers test without live API keys. The buried lede: the entire project was built in Rust by an AI agent swarm, racking up nearly 30,000 commits in three weeks. Agent-generated infrastructure is now production-grade.</p>
+
+<h3 class="story-headline">a16z</h3>
+<h3 class="story-headline"><a href="https://www.youtube.com/watch?v=xuczlbVVLsQ">Why Frontier Models Still Can't Parse a PDF</a></h3>
+<p class="story-body">Reducto's CEO makes a pointed case: agents can reason beautifully but fall apart the moment they hit a scanned document or legacy spreadsheet. The document parsing layer is the unglamorous chokepoint blocking AI adoption in healthcare, legal, and finance.</p>
+
+<h3 class="story-headline">CoinDesk</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/markets/2026/11/13/bitcoin-firm-nakamoto-owes-kraken-usd165-million-more-than-its-entire-market-value">Bitcoin Firm Nakamoto Owes Kraken More Than Its Entire Market Cap</a></h3>
+<p class="story-body">Nakamoto is on the hook for $165 million to Kraken — a figure that exceeds what the company is actually worth. With Bitcoin ETFs now down over $1.5 billion in net outflows for the year and BTC hovering around $73K, the leveraged-crypto-treasury playbook is showing its cracks.</p>
+
+<h3 class="story-headline">All-In Podcast</h3>
+<h3 class="story-headline"><a href="https://www.youtube.com/watch?v=2v8b062QzTI">Midterm Blood Bath: $4T AI Sell-Off and What Comes Next</a></h3>
+<p class="story-body">A generational GOP collapse at the midterms has spooked markets — $4 trillion in AI-linked market cap evaporated in the aftermath, with data center spending now under political scrutiny. OpenAI reportedly solving the Exponential Time Hypothesis gets a brief Science Corner mention, which somehow feels undersold.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/demishassabis/status/2120942605466800374">@demishassabis</a></h3></div><p>Demis Hassabis personally hyped Gemini 4 Hydrogen's launch, calling it "incredible speed and intelligence for everyday coding and agentic work." The simultaneous RT from Aaron Levie praising its performance on Box's enterprise eval suite signals this isn't just a developer toy — it's gunning for the mid-tier enterprise slot that Claude Sonnet has owned.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2120641914206892424">@emollick</a></h3></div><p>Ethan Mollick made a quietly significant observation: coding is the proof-of-concept for how fast AI can transform an entire profession — not over decades, but in under a year. He's using it as a counterweight to anyone arguing AI diffusion will be slow and gradual. The data says otherwise, at least for one very watched domain.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/KobeissiLetter/status/2121171229210005816">@KobeissiLetter</a></h3></div><p>Retail investors poured $730 million into Nvidia in a single Tuesday session — their biggest daily buy since March — even as an internal post calling for Jensen Huang's reinstatement drew 1,600 comments. Retail is treating the spy scandal dip as a buying opportunity. Whether that's savvy or sentimental is the open question.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/milesdeutscher/status/2120956041156301027">@milesdeutscher</a></h3></div><p>Miles Deutscher is flagging GTA VI as the next AI gold rush, arguing that Fable 5.2 "one-shotted" a full build in 4 million tokens and 10 hours. His thread on making money from GTA VI with Claude is already circulating hard — mods, RP services, and content clipping infrastructure are the plays he's mapping out.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body"><strong>The story threading through everything today is leverage — financial, technical, and political — and what happens when it snaps.</strong> Nakamoto underwater on a $165M Kraken loan. BTCS selling ETH at a loss to service Aave debt. Bitcoin ETFs bleeding $1.5 billion in outflows while retail piles into Nvidia on a spy-scandal dip. These aren't isolated events; they're the same behavior pattern at different scales: entities that borrowed against an AI-and-crypto supercycle now getting margin-called by reality.
+
+<div class="thread-pull">"The leveraged-crypto-treasury playbook is showing its cracks — and so is the leveraged-attention playbook in AI."</div>
+
+On the model side, Google's Gemini 4 Hydrogen launch is a direct shot at the mid-tier market Claude Sonnet has dominated. The timing is sharp — right as midterm fallout and a $4T AI market selloff create anxiety about whether the buildout is overextended. A cheap, fast, capable model that plugs into Search and enterprise tools is exactly the kind of product that wins when budgets tighten. Hydrogen isn't trying to be GPT-5. It's trying to be everywhere.
+
+The AWS agent-built emulator — 29,684 commits in three weeks — deserves more attention than it's getting. We've crossed a threshold where agents aren't just writing features, they're building the infrastructure other developers test against. That's a different category of capability. And Ethan Mollick is right: coding is the canary. When an entire profession's workflow restructures in under a year, the people still arguing AI diffusion will be slow aren't watching the same industry.</div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a> &nbsp;|&nbsp; <a href="https://x.com/EpochAIResearch">@EpochAIResearch</a> &nbsp;|&nbsp; <a href="https://x.com/GoldmanSachs">@GoldmanSachs</a> &nbsp;|&nbsp; <a href="https://x.com/federalreserve">@federalreserve</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@allin">All-In</a></div>
+</footer>
+
+</body>
+</html>
