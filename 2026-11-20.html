@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Friday, November 20, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 1.25rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 2.5rem; font-family: 'DM Mono', monospace; font-size: 1rem; letter-spacing: 0.03em; flex-wrap: wrap; }
+  .ticker-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.12em; }
+  .ticker-val { color: #f5f2eb; font-size: 1.1rem; font-weight: 500; }
+  .ticker-up { color: #5cb85c; font-size: 0.85rem; }
+  .ticker-down { color: #e05252; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Friday, November 20, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">7,323.63</span><span class="ticker-down">▼ 0.23%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">50,198.17</span><span class="ticker-down">▼ 1.11%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">24,429.88</span><span class="ticker-up">▲ 0.44%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">22.20</span><span class="ticker-down">▼ 9.61%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$63,785.00</span><span class="ticker-down">▼ 0.83%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$0.98</span><span class="ticker-down">▼ 1.50%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$1,804.27</span><span class="ticker-down">▼ 0.01%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.06</span><span class="ticker-down">▼ 0.15%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source">404 MEDIA</div><h3 class="story-headline"><a href="https://www.404media.co/ice-is-paying-at-t-to-dig-through-a-mountain-of-call-records-hemisphere-data-analytical-services/">ICE Is Paying AT&T to Dig Through a Mountain of Call Records</a></h3>
+<p class="story-body">An internal ICE document reveals the agency is purchasing access to AT&T's raw call data and analytical services — a program experts say may sweep up trillions of records. Lawmakers are calling it mass surveillance by another name, and it's happening without broad public awareness.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/redlining-ai-data-centers-and-race-study/">Black Neighborhoods Are Twice as Likely To House a Data Center, Study Finds</a></h3>
+<p class="story-body">A new study maps the AI infrastructure buildout onto historical redlining patterns with striking results: majority-Hispanic neighborhoods face 2.6x the concentration, majority-Asian neighborhoods 4.2x. The costs of powering the AI economy are being distributed anything but evenly.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/">Token Fraud Is Here and It's BAD</a></h3>
+<p class="story-body">Claire Vo of ChatPRD documents a surge in AI token fraud hitting real products in production. As AI platforms scale, the attack surface for credential abuse and token theft is growing faster than defenses — a problem the industry has largely ignored until now.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/19/postgresql-19/">PostgreSQL 19 Released</a></h3>
+<p class="story-body">Postgres shipped two months late this year — and AI is to blame. The team had to address a flood of issues driven by the explosion of AI-generated code hitting production databases. The release still landed 200+ bugfixes, while AI agents rewrote 185,000 lines of C into 340,000 lines of Rust nearby.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/markets/2026/11/20/cathie-wood-s-ark-invest-piled-into-anthropic-ipo-buying-usd90-million-worth-of-shares">Cathie Wood's Ark Invest Piled Into Anthropic IPO, Buying $90 Million Worth of Shares</a></h3>
+<p class="story-body">Ark committed $90M to Anthropic's historic $81.34B Nasdaq debut — the largest IPO ever. Crypto futures markets are already pricing the stock down ~5% from its first-day close, suggesting early euphoria may be cooling fast.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/ransomware-fraud-attack-fbi-indictment/">To Catch a Ransomware Scammer, FBI Posed as Both Victim and Attacker</a></h3>
+<p class="story-body">The FBI ran a double-sided sting — impersonating both the ransomware victim and the threat actors — to catch an alleged fraud scheme in progress. It's a glimpse into how federal investigators are getting creative as ransomware operations grow more sophisticated.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2123541572490817605">@ethanmollick</a></h3></div><p>Mollick flagged what may become a defining tension of the agentic era: companies blocking customers from using their own AI agents to manage their own accounts. It sounds absurd until you realize every major institution has liability, compliance, and authentication reasons to hate it. The customer-vs-company AI arms race is just getting started.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/theneurondaily/status/2123542563068272982">@theneurondaily</a></h3></div><p>Anthropic's IPO hit Nasdaq at an $81.34 billion valuation — the largest offering ever — with its first trade coming in well above the offer price. The Neuron called it in real time as it happened. For context, this is a company that describes existential AI risk in its own charter. The market, apparently, is fine with that.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/demishassabis/status/2123416707783889070">@demishassabis</a></h3></div><p>Hassabis retweeted a user reporting that Gemini Neon — Google's newest model — beat Fable 5.2 on nearly every benchmark they tried, adding pointed commentary about being "underestimated." With Neon arriving just as Anthropic dominates headlines, DeepMind is clearly not content to let the IPO moment belong to anyone else.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/KobeissiLetter/status/2123628399998521610">@kobeissiletter</a></h3></div><p>The Kobeissi Letter made a bold call amid the tech selloff: this bear market will be remembered as the best buying opportunity of the decade. Gold fell below $3,550, silver cratered, South Korea's KOSPI dropped 5%, and AI-adjacent stocks shed trillions — but the macro letter crowd is treating the dip as a generational setup, not a warning.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body"><p>Two stories this week deserve to be read together: ICE paying AT&T for access to a surveillance dragnet covering potentially trillions of call records, and a study showing data centers are disproportionately sited in minority neighborhoods. The infrastructure of AI — both the compute layer and the intelligence layer — is being built on and aimed at communities with the least political power to push back.</p>
+
+<div class="thread-pull">"The costs of powering the AI economy are being distributed anything but evenly — and so is the scrutiny."</div>
+
+<strong>Meanwhile, Anthropic's IPO at $81 billion is the most clarifying event in AI's short public history.</strong> A company that opened its S-1 with language about civilizational risk just became one of the most valuable tech listings ever. Ark bought $90M worth. Goldman underwrote it. The market has decided that "we might be building something dangerous" is not a reason to pass — it's a reason to get in early. Crypto futures are already pricing a 5% haircut from day one, which suggests the smart money is treating this like any other momentum trade.
+
+The Gemini Neon signal from Demis Hassabis is worth watching. Google DeepMind dropped a model that's reportedly outperforming Anthropic's Fable 5.2 on the same week Claude's parent company debuted on Nasdaq. The timing is not accidental. The race for frontier model dominance is now also a race for public market narrative — and DeepMind just reminded everyone they're still very much in it.</div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a> &nbsp;|&nbsp; <a href="https://x.com/EpochAIResearch">@EpochAIResearch</a> &nbsp;|&nbsp; <a href="https://x.com/GoldmanSachs">@GoldmanSachs</a> &nbsp;|&nbsp; <a href="https://x.com/federalreserve">@federalreserve</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@allin">All-In</a></div>
+</footer>
+
+</body>
+</html>
