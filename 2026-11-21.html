@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Futurist — Saturday, November 21, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d0d0d; --paper: #f5f2eb; --paper-warm: #ede9df;
+    --midnight: #0f0e17; --midnight-2: #1a1828;
+    --accent: #c8392b; --accent-gold: #c9943a; --accent-teal: #1a6b6b;
+    --muted: #6b6560; --rule: rgba(13,13,13,0.15);
+  }
+  html { font-size: 16px; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .masthead { background: var(--midnight); color: #f5f2eb; border-bottom: 3px solid var(--accent); }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .masthead-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.5rem; }
+  .masthead-title { font-family: 'Fraunces', serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: #f5f2eb; }
+  .masthead-title em { font-style: italic; color: var(--accent-gold); }
+  .masthead-date { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 300; font-style: italic; color: rgba(245,242,235,0.6); line-height: 1.8; text-align: right; }
+  .masthead-tagline { max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,235,0.4); display: flex; gap: 2rem; }
+  .ticker { background: var(--midnight-2); color: #f5f2eb; padding: 1.25rem 0; }
+  .ticker-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 2.5rem; font-family: 'DM Mono', monospace; font-size: 1rem; letter-spacing: 0.03em; flex-wrap: wrap; }
+  .ticker-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ticker-label { color: rgba(245,242,235,0.45); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.12em; }
+  .ticker-val { color: #f5f2eb; font-size: 1.1rem; font-weight: 500; }
+  .ticker-up { color: #5cb85c; font-size: 0.85rem; }
+  .ticker-down { color: #e05252; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 3rem 0 1.25rem; border-bottom: 2px solid var(--ink); margin-bottom: 2rem; }
+  .section-numeral { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 900; line-height: 1; color: var(--rule); letter-spacing: -0.04em; flex-shrink: 0; margin-bottom: -0.2em; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .section-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .story-card { padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
+  .story-card:nth-child(odd) { padding-right: 2rem; border-right: 0.5px solid var(--rule); }
+  .story-card:nth-child(even) { padding-left: 2rem; }
+  .story-source { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .story-headline { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--ink); }
+  .story-headline a { color: inherit; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.15s; }
+  .story-headline a:hover { border-color: var(--accent); }
+  .story-body { font-size: 0.875rem; line-height: 1.65; color: #3d3a36; }
+  .story-hero { background: var(--midnight); color: #f5f2eb; padding: 3rem 2rem; margin: 0 -2rem 2rem; }
+  .story-hero .story-source { color: var(--accent-gold); }
+  .story-hero .story-headline { font-size: clamp(1.6rem, 3vw, 2.5rem); color: #f5f2eb; margin-bottom: 1rem; }
+  .story-hero .story-headline a { color: #f5f2eb; }
+  .story-hero .story-body { color: rgba(245,242,235,0.75); font-size: 0.95rem; max-width: 680px; }
+  .twitter-section { background: var(--midnight); color: #f5f2eb; padding: 0 0 3rem; margin-top: 3rem; }
+  .twitter-section .section-header { border-color: rgba(245,242,235,0.2); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .twitter-section .section-numeral { color: rgba(245,242,235,0.08); }
+  .twitter-section .section-label { color: rgba(245,242,235,0.4); }
+  .twitter-section .section-title { color: #f5f2eb; }
+  .tweets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(245,242,235,0.1); margin: 0 2rem; }
+  .tweet-card { background: var(--midnight-2); padding: 1.5rem; }
+  .tweet-handle { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .tweet-handle h3 { font-size: 0.65rem; font-weight: 400; }
+  .tweet-handle a { color: inherit; text-decoration: none; }
+  .tweet-card p { font-size: 0.875rem; line-height: 1.6; color: rgba(245,242,235,0.85); font-style: italic; }
+  .thread-section { background: #2d1a14; color: #f5f2eb; padding: 0 0 4rem; }
+  .thread-section .section-header { border-color: rgba(200,57,43,0.4); padding: 3rem 2rem 1.25rem; margin: 0 0 2rem; }
+  .thread-section .section-numeral { color: rgba(200,57,43,0.15); }
+  .thread-section .section-label { color: rgba(245,242,235,0.4); }
+  .thread-section .section-title { color: #f5f2eb; }
+  .thread-body { padding: 0 2rem; max-width: 780px; }
+  .thread-body p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; line-height: 1.75; color: rgba(245,242,235,0.88); margin-bottom: 1.25rem; }
+  .thread-body p strong { font-weight: 700; color: #f5f2eb; }
+  .thread-pull { font-family: 'Fraunces', serif; font-size: 1.75rem; font-style: italic; font-weight: 700; line-height: 1.3; color: var(--accent-gold); border-left: 3px solid var(--accent); padding: 1rem 0 1rem 1.5rem; margin: 2rem 0; max-width: 640px; }
+  .sources-bar { background: var(--paper-warm); border-top: 2px solid var(--ink); padding: 1.5rem 2rem; }
+  .sources-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; }
+  .sources-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 1rem; flex-shrink: 0; }
+  .sources-inner a { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; padding: 0 0.75rem; border-right: 0.5px solid var(--rule); transition: color 0.15s; }
+  .sources-inner a:last-child { border-right: none; }
+  .sources-inner a:hover { color: var(--ink); }
+  @media (max-width: 720px) {
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card:nth-child(odd) { padding-right: 0; border-right: none; }
+    .story-card:nth-child(even) { padding-left: 0; }
+    .tweets-grid { grid-template-columns: 1fr; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .masthead-date { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-eyebrow">Morning Edition</div>
+      <h1 class="masthead-title">The <em>Futurist</em></h1>
+    </div>
+    <div class="masthead-date">Saturday, November 21, 2026</div>
+  </div>
+  <div class="masthead-tagline">
+    <span>AI &amp; Technology</span>
+    <span>Markets &amp; Crypto</span>
+    <span>Ideas Worth Keeping</span>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner"><div class="ticker-item"><span class="ticker-label">S&P 500</span><span class="ticker-val">7,175.83</span><span class="ticker-down">▼ 2.00%</span></div>
+<div class="ticker-item"><span class="ticker-label">Dow Jones</span><span class="ticker-val">49,097.06</span><span class="ticker-down">▼ 2.18%</span></div>
+<div class="ticker-item"><span class="ticker-label">Nasdaq</span><span class="ticker-val">23,879.20</span><span class="ticker-down">▼ 2.24%</span></div>
+<div class="ticker-item"><span class="ticker-label">VIX</span><span class="ticker-val">29.49</span><span class="ticker-up">▲ 3.58%</span></div>
+<div class="ticker-item"><span class="ticker-label">BITCOIN</span><span class="ticker-val">$61,860.00</span><span class="ticker-down">▼ 3.00%</span></div>
+<div class="ticker-item"><span class="ticker-label">RIPPLE</span><span class="ticker-val">$0.96</span><span class="ticker-down">▼ 2.02%</span></div>
+<div class="ticker-item"><span class="ticker-label">ETHEREUM</span><span class="ticker-val">$1,749.48</span><span class="ticker-down">▼ 2.99%</span></div>
+<div class="ticker-item"><span class="ticker-label">DOGECOIN</span><span class="ticker-val">$0.06</span><span class="ticker-down">▼ 3.84%</span></div></div>
+</div>
+
+<section class="ai-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-numeral">01</span>
+      <div>
+        <div class="section-label">What's Moving</div>
+        <h2 class="section-title">AI &amp; Technology</h2>
+      </div>
+    </div>
+    <div class="story-hero"><div class="story-source">ALL-IN PODCAST</div><h3 class="story-headline"><a href="https://www.youtube.com/watch?v=Uv2w4VTU-iQ">Jensen OUT as Nvidia CEO: Spy Scandal, Export Restrictions, Market Impact</a></h3>
+<p class="story-body">Jensen Huang has stepped down as Nvidia CEO amid spy allegations and a classified memo leak, sending shockwaves through AI markets already reeling from a broad sell-off. The All-In crew dissects who wanted him out, what it means for "the Bank of Nvidia," and China's strategic positioning. This is the biggest leadership story in tech in years.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/20/levent-alpoge/">Mathematician Claims Riemann Hypothesis Proof — With Claude</a></h3>
+<p class="story-body">Harvard mathematician Levent Alpöge says he's proved the Riemann Hypothesis working alongside Claude, one of the most consequential unsolved problems in mathematics carrying a $1M prize. A separate human-only proof attempt is also circulating — making this a rare and surreal head-to-head. Both claims are unverified.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/redlining-ai-data-centers-and-race-study/">Black Neighborhoods Are Twice as Likely to House a Data Center</a></h3>
+<p class="story-body">A new study finds majority-Black neighborhoods are 2x more likely to host data centers — a figure that rises to 4.2x in majority-Asian neighborhoods. The AI infrastructure boom is following old redlining fault lines, concentrating noise, heat, and power strain in communities with the least political leverage.</p>
+
+<h3 class="story-headline">SIMON WILLISON</h3>
+<h3 class="story-headline"><a href="https://simonwillison.net/2026/Nov/19/postgresql-19/">PostgreSQL 19 Released — Two Months Late, Thanks to AI</a></h3>
+<p class="story-body">PostgreSQL's annual release slipped from September to November this year, with the team citing a flood of AI-generated bug reports and patches that needed sorting. It's a preview of what open source maintainers will increasingly face: AI as both accelerant and noise machine.</p>
+
+<h3 class="story-headline">404 MEDIA</h3>
+<h3 class="story-headline"><a href="https://www.404media.co/ransomware-fraud-attack-fbi-indictment/">To Catch a Ransomware Scammer, FBI Posed as Both Victim and Attacker</a></h3>
+<p class="story-body">The FBI ran a double-sided sting — impersonating both ransomware victims and the threat actors targeting them — to catch an alleged fraud scheme in real time. The operation reveals how law enforcement is adopting adversarial AI-era tactics to infiltrate criminal networks from multiple angles simultaneously.</p>
+
+<h3 class="story-headline">COINDESK</h3>
+<h3 class="story-headline"><a href="https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug">AI Finds Critical Bitcoin Node Vulnerability</a></h3>
+<p class="story-body">An AI system discovered a bug in Bitcoin's network: repeating a single ID 50,000 times can stall nodes entirely. The find underscores a new reality — AI is now doing security-critical infrastructure audits that human researchers miss.</p></div>
+    <div class="story-grid"></div>
+  </div>
+</section>
+
+<section class="twitter-section">
+  <div class="section-header">
+    <span class="section-numeral">02</span>
+    <div>
+      <div class="section-label">From the Feed</div>
+      <h2 class="section-title">X / Twitter Signal</h2>
+    </div>
+  </div>
+  <div class="tweets-grid"><div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/theneurondaily/status/2123832921689903168">@The Neuron Daily</a></h3></div><p>The account flagged Levent Alpöge's claim that he proved the Riemann Hypothesis collaborating with Claude — a $1M Millennium Prize problem unsolved since 1859. It matters not just if the proof holds, but because it marks the first credible public claim of a frontier AI co-authoring a major mathematical breakthrough. The math community is now on watch.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/emollick/status/2123867811005014143">@Ethan Mollick</a></h3></div><p>Mollick floated a sharp hypothesis: the slowdown in open-weights model progress may trace directly back to OpenAI and Anthropic cracking down on distillation from their frontier models. If closed labs are the primary training signal for open models, cutting that pipe quietly throttles the whole ecosystem — no announcement required.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/EpochAIResearch/status/2123836818386997681">@Epoch AI</a></h3></div><p>Jensen Huang's exit put a spotlight on Epoch AI's ongoing investigation into how advanced Nvidia chips are reaching China despite export controls. Their research suggests the leakage is structural, not incidental — meaning no single CEO departure fixes the underlying enforcement gaps.</p></div>
+<div class="tweet-card"><div class="tweet-handle"><h3><a href="https://x.com/dair_ai/status/2123768329810903053">@DAIR.AI</a></h3></div><p>DAIR.AI flagged a provocative finding: for long-horizon agent tasks, an append-only text log plus grep beats sophisticated summarization and structured memory systems. Sometimes the dumbest architecture wins — and that has real implications for how agentic systems should be designed at scale.</p></div>
+</div>
+</section>
+
+<section class="thread-section">
+  <div class="section-header">
+    <span class="section-numeral">03</span>
+    <div>
+      <div class="section-label">Commentary &amp; Synthesis</div>
+      <h2 class="section-title">The Thread</h2>
+    </div>
+  </div>
+  <div class="thread-body"><p>The week's signal is coming from multiple directions at once, but it all points at the same underlying tension: AI is now operating at the boundary of civilization-scale systems. A mathematician co-proves one of history's hardest problems with Claude. An AI audits Bitcoin's core network and finds a hole humans missed. PostgreSQL ships late because maintainers are drowning in AI-generated contributions. These aren't demos. They're infrastructure events.</p>
+
+<div class="thread-pull">The question is no longer whether AI can do serious work. It's whether our institutions can process the output fast enough to matter.</div>
+
+<strong>The Jensen Huang story is the week's wild card.</strong> His departure from Nvidia — amid spy allegations and export control failures — arrives exactly when the "AI trade" is unwinding hardest. Bitcoin under $62K, Nasdaq off over 2%, VIX spiking to 29. Markets built the last two years around Nvidia as an unkillable foundation. That story now has a crack in it, and nobody has a clean replacement thesis yet.
+
+Meanwhile, the Riemann Hypothesis claims — one human, one AI-assisted — arriving in the same week is either history or noise. The math community will take months to decide. But the timing alone tells you something: we are in a period where extraordinary claims arrive faster than they can be verified, and the gap between announcement and truth is becoming its own kind of market.</div>
+</section>
+
+<footer class="sources-bar">
+  <div class="sources-inner"><span class="sources-label">Sources</span><a href="https://simonwillison.net">Simon Willison</a> &nbsp;|&nbsp; <a href="https://thedeepview.com">The Deep View</a> &nbsp;|&nbsp; <a href="https://tldr.tech">TLDR Tech</a> &nbsp;|&nbsp; <a href="https://www.coindesk.com">CoinDesk</a> &nbsp;|&nbsp; <a href="https://www.404media.co">404 Media</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@a16z">a16z</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@GregIsenberg">Greg Isenberg</a> &nbsp;|&nbsp; <a href="https://x.com/cvpayne">@cvpayne</a> &nbsp;|&nbsp; <a href="https://x.com/KobeissiLetter">@KobeissiLetter</a> &nbsp;|&nbsp; <a href="https://x.com/AndrewYNg">@AndrewYNg</a> &nbsp;|&nbsp; <a href="https://x.com/karpathy">@karpathy</a> &nbsp;|&nbsp; <a href="https://x.com/DarioAmodei">@DarioAmodei</a> &nbsp;|&nbsp; <a href="https://x.com/milesdeutscher">@milesdeutscher</a> &nbsp;|&nbsp; <a href="https://x.com/lexfridman">@lexfridman</a> &nbsp;|&nbsp; <a href="https://x.com/rowancheung">@rowancheung</a> &nbsp;|&nbsp; <a href="https://x.com/heykahn">@heykahn</a> &nbsp;|&nbsp; <a href="https://x.com/a16z">@a16z</a> &nbsp;|&nbsp; <a href="https://x.com/theneurondaily">@theneurondaily</a> &nbsp;|&nbsp; <a href="https://x.com/crypto">@crypto</a> &nbsp;|&nbsp; <a href="https://x.com/demishassabis">@demishassabis</a> &nbsp;|&nbsp; <a href="https://x.com/dair_ai">@dair_ai</a> &nbsp;|&nbsp; <a href="https://x.com/rasbt">@rasbt</a> &nbsp;|&nbsp; <a href="https://x.com/emollick">@emollick</a> &nbsp;|&nbsp; <a href="https://x.com/EpochAIResearch">@EpochAIResearch</a> &nbsp;|&nbsp; <a href="https://x.com/GoldmanSachs">@GoldmanSachs</a> &nbsp;|&nbsp; <a href="https://x.com/federalreserve">@federalreserve</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@allin">All-In</a></div>
+</footer>
+
+</body>
+</html>
